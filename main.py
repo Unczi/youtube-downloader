@@ -17,7 +17,7 @@ def video():
         video.download()
         messagebox.showinfo(title='Siker', message='Sikeres letöltés')
     except:
-        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videót. :(\nKérlek, ellenőrizd, hogy csatlakozol-e az internethez.')
+        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videót. :( \nLehetséges problémák:\n - Nincs internet\n - A videó privát\n - A videó korhatáros')
 
 def playlist():
     global urlInputPlaylist
@@ -32,7 +32,7 @@ def playlist():
         tobb_video(urls)
         messagebox.showinfo(title='Siker', message='Sikeres letöltés')
     except:
-        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videót. :(\nKérlek, ellenőrizd, hogy csatlakozol-e az internethez.')
+        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videókat. :( \nLehetséges problémák:\n - Nincs internet\n - Egy vagy több videó privát\n - Egy vagy több videó korhatáros')
 
 def tobb():
     global urlInputTobb
@@ -42,7 +42,7 @@ def tobb():
         tobb_video(video_lista)
         messagebox.showinfo(title='Siker', message='Sikeres letöltés')
     except:
-        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videót. :(\nKérlek, ellenőrizd, hogy csatlakozol-e az internethez.')
+        messagebox.showerror(title='Hiba', message='Sajnos nem sikerült letölteni a videókat. :( \nLehetséges problémák:\n - Nincs internet\n - Egy vagy több videó privát\n - Egy vagy több videó korhatáros')
 
 def tobb_video(videok):
     for video in videok:
